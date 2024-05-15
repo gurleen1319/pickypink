@@ -1,1 +1,3 @@
-pip install streamlit, requests, BeautifulSoup4 
+streamlit
+requests
+BeautifulSoup4 
