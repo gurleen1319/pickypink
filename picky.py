@@ -1,9 +1,10 @@
 import streamlit as st
 import requests
 from bs4 import BeautifulSoup
+import urllib.parse
 
 def scrape_google_shopping(query):
-    url = f"https://www.google.com/search?tbm=shop&q={query}"
+    url = f"https://www.google.co.in/search?tbm=shop&q={urllib.parse.quote(query)}"
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
 
     response = requests.get(url, headers=headers)
